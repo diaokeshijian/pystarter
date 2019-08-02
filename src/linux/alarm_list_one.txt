@@ -1,0 +1,37 @@
+Created: 2019-04-04 14:27:06 by: eleiguu Number of alarms:  1
+
+%a
+-RecordId=145737098
+-AlarmState=2
+-SystemType=COM
+-EventTime=20190404123435
+-ETtext=Quality of service alarm
+-EventType=3
+-ObjectOfReference=SubNetwork=ONRM_ROOT_MO,SubNetwork=RadioNode,ManagedElement=PSN7288X_2NB01,ENodeBFunction=1,EUtranCellFDD=PSN7288T_2NB01_S01
+-BackupObjectInstance=
+-PerceivedSeverity=2
+-PCtext=x733ThresholdCrossed
+-ProbableCause=351
+-SPtext=Suspected Sleeping Cell
+-SpecificProblem=1702400897
+-AlarmId=145737098
+-AlarmNumber=9175117
+-RecordType=1
+-ObjectType=341238285
+-Acknowledger=FMA_ack_server
+-AcknowledgeTime=20190404123442
+-PRAtext=< Unknown >
+-ProblemText=
+:eriAlarmNObjMoreAdditionalText:2
+:AlarmActiveLastSequenceNo:10660
+:AlarmMajorType:193
+:eriAlarmNObjAdditionalText:Preambles, no activity, recov succ
+:eriAlarmNObjResourceId:2
+-ProblemData=
+-LoggingTime=20190404123440
+-FMXFlag=1
+-FmAlarmId=145737098
+-EAName=PSN7288X_2NB01,1
+%A
+
+
