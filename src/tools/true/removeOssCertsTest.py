@@ -1,11 +1,25 @@
 import sys
 
+def getEnmNodeCredId():
+    enmNodeCredentialId = 0  # type: int
+    isEnmCredential = False
+    output = open('C:\\Users\\ebenyue\\Desktop\\nodecred.txt')
+    lines = output.readlines()
+    for line in lines:
+        line = line.replace('\n', '')
+        #print line
+        fdn = ''
+        if line.startswith('FDN'):
+            fdn = line.split('NodeCredential=')
+            enmNodeCredentialId = fdn[1]
+        if line.startswith('certificateContent '):
+            if 'http://10.81.10' in line:
+                isEnmCredential = True
+                break
+    return enmNodeCredentialId
 
-node_id_file = open('C:\\Users\ebenyue\\Desktop\\bb_node_list.txt')
-nodes_id_list = node_id_file.readlines()
 
-print len(nodes_id_list)
+id = getEnmNodeCredId()
+print id
 
-for node in nodes_id_list:
-    node = node.replace('\n', '')
-    print node
+
