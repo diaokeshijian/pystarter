@@ -37,7 +37,17 @@ logging.basicConfig(level=logging.INFO,
 
 logging.info('Program started!')
 
+logging.info('establish ENM terminal session:')
+session = enmscripting.open(enm_url, enm_user, enm_pass)
+terminal = session.terminal()
+logging.info('ENM terminal session established!')
 
+#################
+# FUNCTIONS
+#################
+
+
+# get current NodeCredentialId
 def getEnmNodeCredId(node_name):
     _enmNodeCredentialId = 0  # type: int
     isEnmCredential = False
@@ -53,17 +63,26 @@ def getEnmNodeCredId(node_name):
             if 'http://10.81.10' in line:
                 isEnmCredential = True
                 break
-    return _enmNodeCredentialId
+    if isEnmCredential:
+        return _enmNodeCredentialId
+    else:
+        return 0
 
 
-logging.info('establish ENM terminal session:')
-session = enmscripting.open(enm_url, enm_user, enm_pass)
-terminal = session.terminal()
-logging.info('ENM terminal session established!')
-
+#################
+# MAIN
+#################
 node_file = open(sys.argv[1])
 node_list = node_file.readlines()
 
 for node in node_list:
     enmNodeCredentialId = getEnmNodeCredId(node)
     print 'enm credId : ' + str(enmNodeCredentialId)
+    if enmNodeCredentialId == 0:
+        logging.info('node has not been certificated by ENM, node name: ' + node)
+    else:
+        command_change_node_https_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,HttpM=1,Https=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(enmNodeCredentialId) + "'"
+        print command_change_node_https_credential
+        command_change_node_clitls_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,CliTls=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(enmNodeCredentialId) + "'"
+        print command_change_node_clitls_credential
+
