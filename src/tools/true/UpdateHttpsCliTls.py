@@ -67,9 +67,9 @@ def getEnmNodeCredId(node_name):
                 _enmNodeCredentialId = _NodeCredentialId
             else:
                 _ossNodeCredentialId = _NodeCredentialId
-    credentials = {'enmNodeCredentialId': _enmNodeCredentialId, 'ossNodeCredentialId': _ossNodeCredentialId}
+    _credentials = {'enmNodeCredentialId': _enmNodeCredentialId, 'ossNodeCredentialId': _ossNodeCredentialId}
     if credited:
-        return credentials
+        return _credentials
     else:
         return 0
 
