@@ -17,8 +17,7 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d')
 # Variables
 #################
 
-log_dir = './LOGS/'
-file_dir = '/var/tmp/data_migration/Day_10/'
+log_dir = './'
 
 enm_url = 'https://enmnth.rfterranenm1.net'
 enm_user = 'Administrator'
@@ -77,8 +76,8 @@ def getEnmNodeCredId(node_name):
 #################
 # MAIN
 #################
-node_file = open(sys.argv[1])
-node_list = node_file.readlines()
+#   node_file = open(sys.argv[1])
+node_list = ['CNT7134X_2NB01']
 
 for node in node_list:
     credentials = getEnmNodeCredId(node)

@@ -50,6 +50,7 @@ logging.info('ENM terminal session established!')
 def sortCertificates(_node):
     command_get_all_certificates = 'cmedit get ' + _node + ' TrustedCertificate.*'
     output = terminal.execute(command_get_all_certificates)
+    logging.info(output)
     response_code = output.http_response_code()
     print 'response code : ' + str(response_code)
 
