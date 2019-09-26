@@ -1,0 +1,566 @@
+Script started on Wed Aug 28 15:11:30 2019
+\u@\h:\w\$ 
+\u@\h:\w\$ 
+\u@\h:\w\$ 
+\u@\h:\w\$ 
+\u@\h:\w\$ bash
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# ssh 10.81.104.  .4
+Warning: Permanently added '10.81.10.4' (RSA) to the list of known hosts.
+###########  WARNING  ############
+
+This system is for authorised use only. By using this system you consent to monitoring and data collection.
+
+##################################
+root@10.81.10.4's password: 
+baLast login: Wed Aug 28 15:05:46 2019 from 10.80.124.5
+[15:11:39 root@renm1lms1:~ ]# bash
+[15:11:39 root@renm1lms1:~ ]# 
+[15:11:39 root@renm1lms1:~ ]# 
+[15:11:39 root@renm1lms1:~ ]# 
+[15:11:40 root@renm1lms1:~ ]# 
+[15:11:40 root@renm1lms1:~ ]# /opt/ericsson/enmutils/bin/cli_app "cmedit describe --netype RBS"
+Ne Type : RBS
+Ne Release : 17.Q4
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.720
+Model ID : 17.Q4-U.4.720
+Ne Type : RBS
+Ne Release : 17.Q4
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.700
+Model ID : 17.Q4-U.4.700
+Ne Type : RBS
+Ne Release : 17.Q4
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.680
+Model ID : 17.Q4-U.4.680
+Ne Type : RBS
+Ne Release : 17.Q3
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.630
+Model ID : 17B-U.4.630
+Ne Type : RBS
+Ne Release : 17B
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.570
+Model ID : 17B-U.4.570
+Ne Type : RBS
+Ne Release : 17A
+Product Identity : CXP9023291/7
+Revision (R-State) : R3FA07
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.460
+Model ID : 17A-U.4.460
+Ne Type : RBS
+Ne Release : 17A
+Product Identity : CXP9023291/7
+Revision (R-State) : R2GA26
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.460
+Model ID : 17A-U.4.460
+Ne Type : RBS
+Ne Release : 16B
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.340
+Model ID : 16B-U.4.340
+Ne Type : RBS
+Ne Release : 16A
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.210
+Model ID : 16A-U.4.210
+Ne Type : RBS
+Ne Release : 15B
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : U.4.91
+Model ID : 15B-U.4.91
+Ne Type : RBS
+Ne Release : 13B
+Product Identity : -
+Revision (R-State) : -
+Functional MIM Name : RBS_NODE_MODEL
+Functional MIM Version : RL.1.100
+Model ID : 13B-S2.1.100
+11 instance(s)
+[15:11:50 root@renm1lms1:~ ]# exit
+exit
+[15:11:59 root@renm1lms1:~ ]# exit
+logout
+Connection to 10.81.10.4 closed.
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# /opt/ericsson/              /opt/ericsson/ddc/uibi   til/bin/listme |greo   p CNT7134X_2NB01
+SubNetwork=ONRM_ROOT_MO_R,SubNetwork=RadioNode,MeContext=CNT7134X_2NB01@10.143.82.130@2.3.0.2.24@45@ON@2@3@ECIM_Top@1566979465831@1566972977996
+root@rossmwsmtg1:/home/eleiguu# /opt/ericsson/nms_cif_cs/etc/unsupported/bin/cstest -s Seg_masterservice_CS la SubNetwork=ONRM_ROOT_MO_R,SubNetwork=RadioNode,MeContext=CNT7134X_2NB01
+  [1] dnPrefix (string r nn l)      : <UndefinedValue>
+  [2] mimSwitchPolicy (enum SupportedMimSwitchPolicy m nn l): 1
+  [3] generationCounter (long nn l) : -1
+  [4] userLabel (string 0..128 r m nn l): "CNT7134X_2NB01"
+  [5] neSecurityStatus (string m l) : "ON"
+  [6] upgradeMethodCapability (enum SupportedUpgradeMethodCapability nn l): 3
+  [7] segmentName (string m nn l)   : "SubNetwork=ONRM_ROOT_MO_R,Segment=Seg_masterservice"
+  [8] createUpgradePackageCapability (enum SupportedCreateUpgradePackageCapability nn l): 4
+  [9] pendingRestart (boolean l)    : false
+ [10] compatibilityOfMIMs (boolean r l): false
+ [11] notificationsSupported (boolean ro nn l): true
+ [12] nodeStartTime (string ro nn l): ""
+ [13] telisLastChange (longlong ro nn l): -1
+ [14] ipAddress (string m l)        : "10.143.82.130"
+ [15] MeContextId (string r m nn l) : "CNT7134X_2NB01"
+ [16] lostSynchronisation (string ro l): "SYNCHRONIZED"
+ [17] neMIMversion (string r l)     : "2.3.0.2.24"
+ [18] associatedRnc (string l)      : "SubNetwork=ONRM_ROOT_MO_R,SubNetwork=PSN8361X,MeContext=PSN8361X"
+ [19] bcrLastChange (longlong ro nn l): 1566979465831
+ [20] neCreationComplete (boolean nn l): true
+ [21] lastProcessedEventTime (string ro nn l): "2019-08-28T08:04:25+00:00"
+ [22] rollbackMirrorMIBname (string nn l): <UndefinedValue>
+ [23] rbsGroupRef (string nn l)     : "SubNetwork=ONRM_ROOT_MO_R,SubNetwork=PSN8361X,RbsGroup=CNT_WCDMA"
+ [24] bctLastChange (longlong ro nn l): 1566972977996
+ [25] restartWarning (boolean l)    : false
+ [26] connectionStatus (enum SupportedConnStatus r l): 2
+ [27] mirrorMIBupdateStatus (enum SupportedMirrorMibUpdateStatus l): 2
+ [28] neType (enum SupportedNeType m nn l): 45
+ [29] neMIMName (string r nn l)     : "ECIM_Top"
+ [30] mirrorMIBsynchStatus (enum SupportedMirrorMibSynchStatus r l): 3
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# 
+root@rossmwsmtg1:/home/eleiguu# /opt/ericsson/ddc/util/bin/listnodes |grep CNT7134X_2NB01
+SubNetwork=ONRM_ROOT_MO,SubNetwork=RadioNode,ManagedElement=CNT7134X_2NB01@RadioNode ENodeB NodeB@18.Q1@true@RadioNode@10.143.82.130@ON@
+root@rossmwsmtg1:/home/eleiguu# ssh 10.80.  1.10.4
+Warning: Permanently added '10.81.10.4' (RSA) to the list of known hosts.
+###########  WARNING  ############
+
+This system is for authorised use only. By using this system you consent to monitoring and data collection.
+
+##################################
+root@10.81.10.4's password: 
+1 Permission denied, please try again.
+root@10.81.10.4's password: 
+Last login: Wed Aug 28 15:14:25 2019 from 10.50.252.209
+[15:32:33 root@renm1lms1:~ ]# bash
+[15:32:34 root@renm1lms1:~ ]# 
+[15:32:34 root@renm1lms1:~ ]# 
+[15:32:34 root@renm1lms1:~ ]# 
+[15:32:34 root@renm1lms1:~ ]# cd cd /var/tmp/ENM_WRAN_Migration; pwd^C
+[15:32:36 root@renm1lms1:~ ]# cd /var/tmp/ENM_WRAN_Migration; pwd
+/var/tmp/ENM_WRAN_Migration
+[15:32:37 root@renm1lms1:ENM_WRAN_Migration ]# ls 0lrt    -lrt
+total 4
+drwxr-xr-x. 3 root root 4096 Aug 28 14:35 [0m[01;34mmigration_day1[0m
+[m[15:32:40 root@renm1lms1:ENM_WRAN_Migration ]# bash
+[15:32:41 root@renm1lms1:ENM_WRAN_Migration ]# 
+[15:32:41 root@renm1lms1:ENM_WRAN_Migration ]# 
+[15:32:41 root@renm1lms1:ENM_WRAN_Migration ]# 
+[15:32:41 root@renm1lms1:ENM_WRAN_Migration ]# cd migration_day1/
+[15:32:42 root@renm1lms1:migration_day1 ]# ls
+[0m[01;34mmigration_files[0m
+[m[15:32:42 root@renm1lms1:migration_day1 ]# ls  c vi mim_model_mapping_file_BB.txt
+[?1h=[1;39r[m[m[0m[H[J[39;1H"mim_model_mapping_file_BB.txt" [New File][2;1H[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;1H[0m[39;1H[7mE353: Nothing in register "[m[39;28H[K[1;1H[39;1H[1m-- INSERT --[0m[39;13H[K[1;1HdioNode[1;7H[K[1;7H[1;6H[K[1;6H[1;5H[K[1;5H[1;4H[K[1;4H[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1HType=RadioNode[2;1H[K[2;1H18.Q1 17Q4-R30A03[39;1H[K[2;17H[39;1H:wq"mim_model_mapping_file_BB.txt" [New] 2L, 33C written[?1l>
+[15:34:54 root@renm1lms1:migration_day1 ]# 
+[15:34:55 root@renm1lms1:migration_day1 ]# 
+[15:34:55 root@renm1lms1:migration_day1 ]# 
+[15:34:55 root@renm1lms1:migration_day1 ]# vi subnetwork_mapping_BB
+[?1h=[1;39r[m[m[0m[H[J[39;1H"subnetwork_mapping_BB" [New File][2;1H[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;1H[39;1H-- INSERT --[0m[39;13H[K[1;1HNT7134X_2NB01 SubNetwork=RadioNode[39;1H[K[1;34H[39;1H[1m-- INSERT --[1;1H[0mcNT7134X_2NB01 SubNetwork=RadioNodecNT7134X_2NB01 SubNetwork=RadioNode[1;35H[K[1;1HCNT7134X_2NB01 SubNetwork=RadioNodeC[39;1H[K[1;1H[39;1H:wq"subnetwork_mapping_BB" [New] 1L, 36C written[?1l>
+[15:36:05 root@renm1lms1:migration_day1 ]# 
+[15:36:05 root@renm1lms1:migration_day1 ]# 
+[15:36:06 root@renm1lms1:migration_day1 ]# 
+[15:36:06 root@renm1lms1:migration_day1 ]# 
+[15:36:06 root@renm1lms1:migration_day1 ]# ls -lrt
+total 12
+drwxr-xr-x. 4 root root 4096 Aug 28 14:35 [0m[01;34mmigration_files[0m
+-rw-r--r--. 1 root root   33 Aug 28 15:34 mim_model_mapping_file_BB.txt
+-rw-r--r--. 1 root root   36 Aug 28 15:36 subnetwork_mapping_BB
+[m[15:36:08 root@renm1lms1:migration_day1 ]# more subnetwork_mapping_BB
+CNT7134X_2NB01 SubNetwork=RadioNode
+[15:36:12 root@renm1lms1:migration_day1 ]# moremim_model_mapping_file_BB.txt
+bash: moremim_model_mapping_file_BB.txt: command not found
+[15:36:37 root@renm1lms1:migration_day1 ]# more mim_model_mapping_file_BB.txt
+Type=RadioNode
+18.Q1 17Q4-R30A03
+[15:36:41 root@renm1lms1:migration_day1 ]# /opt/ericsson/nms_cif_cs/etc/unsupported/bin/cstest -s Seg_masterservice_CS la SubNetwork=ONRM_ROOT_MO_R,SubNetwork=RadioNode,MeContext=CNT7134X_2NB01 |grep -i version
+bash: /opt/ericsson/nms_cif_cs/etc/unsupported/bin/cstest: No such file or directory
+[15:53:20 root@renm1lms1:migration_day1 ]# 
+[15:57:20 root@renm1lms1:migration_day1 ]# 
+[15:57:20 root@renm1lms1:migration_day1 ]# 
+[15:57:20 root@renm1lms1:migration_day1 ]# /opt/ericsson/ddc/util/bin/listno|^C
+[15:57:28 root@renm1lms1:migration_day1 ]# 
+[16:00:51 root@renm1lms1:migration_day1 ]# 
+[16:00:51 root@renm1lms1:migration_day1 ]# 
+[16:00:52 root@renm1lms1:migration_day1 ]# 
+[16:00:52 root@renm1lms1:migration_day1 ]# 
+[16:00:52 root@renm1lms1:migration_day1 ]# 
+[16:00:52 root@renm1lms1:migration_day1 ]# 
+[16:00:52 root@renm1lms1:migration_day1 ]# ls -lrt
+total 12
+drwxr-xr-x. 4 root root 4096 Aug 28 14:35 [0m[01;34mmigration_files[0m
+-rw-r--r--. 1 root root   33 Aug 28 15:34 mim_model_mapping_file_BB.txt
+-rw-r--r--. 1 root root   36 Aug 28 15:36 subnetwork_mapping_BB
+[m[16:00:54 root@renm1lms1:migration_day1 ]# pwd
+/var/tmp/ENM_WRAN_Migration/migration_day1
+[16:01:40 root@renm1lms1:migration_day1 ]# ls -l *
+-rw-r--r--. 1 root root   33 Aug 28 15:34 mim_model_mapping_file_BB.txt
+-rw-r--r--. 1 root root   36 Aug 28 15:36 subnetwork_mapping_BB
+
+migration_files:
+total 12344
+-rw-r--r--. 1 root root       15 Aug 28 14:35 Batch1_BB.txt
+-rw-r--r--. 1 root root       15 Aug 28 14:35 Batch1_RBS.txt
+drwxr-xr-x. 2 root root     4096 Aug 28 14:35 [0m[01;34marne_xml_dir[0m
+drwxr-xr-x. 2 root root     4096 Aug 28 14:35 [01;34mcorrect_mim_versions_dir[0m
+-rw-r--r--. 1 root root 12616088 Aug 28 14:35 pms_profiles.txt
+-rw-r--r--. 1 root root      740 Aug 28 14:35 pms_scannermap.txt
+[m[16:01:44 root@renm1lms1:migration_day1 ]# rm n migration_files/Batch1_RBS.txt ^C
+[16:02:10 root@renm1lms1:migration_day1 ]# vi migration.properties.<node type>           BB
+[?1h=[1;39r[m[m[0m[H[J[39;1H"migration.properties.BB" [New File][2;1H[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;1H[0m[39;1H[K[39;1H:q[39;2H[K[39;2H![39;2H[K[39;2Hq![?1l>[39;1H[K[39;1H[16:03:39 root@renm1lms1:migration_day1 ]# 
+[16:03:39 root@renm1lms1:migration_day1 ]# 
+[16:03:39 root@renm1lms1:migration_day1 ]# 
+[16:03:39 root@renm1lms1:migration_day1 ]# ls 0 -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/arne_xml_dir/
+total 45268
+-rw-------. 1 root root 46347871 Aug 28 14:35 exported_migration_arne.xml
+[16:03:43 root@renm1lms1:migration_day1 ]# ls -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/correct_mim_versions_dir/
+total 484
+-rw-r--r--. 1 root root 493546 Aug 28 14:35 ne_mim_versions.txt
+[16:03:53 root@renm1lms1:migration_day1 ]# ls -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+-rw-r--r--. 1 root root 15 Aug 28 14:35 /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+[16:04:08 root@renm1lms1:migration_day1 ]# ls -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+-rw-r--r--. 1 root root 12616088 Aug 28 14:35 /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+[16:04:17 root@renm1lms1:migration_day1 ]# ls -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+-rw-r--r--. 1 root root 740 Aug 28 14:35 /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+[16:04:26 root@renm1lms1:migration_day1 ]# ls -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+-rw-r--r--. 1 root root 36 Aug 28 15:36 /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+[16:04:43 root@renm1lms1:migration_day1 ]# ls -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+-rw-r--r--. 1 root root 33 Aug 28 15:34 /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+[16:04:52 root@renm1lms1:migration_day1 ]# ls -lrt /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txtsubnetwork_mapping_BB[Kmigration_files/pms_scannermap.txtprofiles.txt[KBatch1_BB.txt[Kcorrect_mim_versions_dir/arne_xml_dir/[K[16:04:52 root@renm1lms1:migration_day1 ]# vi migration.properties.BB[Kls -l *[Kvi migration.properties.BB
+[?1h=[1;39r[m[m[0m[H[J[39;1H"migration.properties.BB" [New File][2;1H[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;1H[0m[39;1H[7mE348: No string under cursor[m[39;29H[K[1;1H[39;1H[1m-- INSERT --[0m[39;13H[K[1;1HOMMON PROPERTIES ######[2;1H[K[2;1Hossrc_hostname = 10.80.124.4[3;1H[K[3;1Hossrc_username = nmsadm[4;1H[K[4;1Hossrc_password = nms275[5;1H[K[5;1H###### NETWORK ELEMENT MIGRATION PROPERTIES ######[6;1H[K[6;1Hmigration_arne_xml_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/arne_xml_dir/[7;1H[K[7;1Hcorrect_mim_versions_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/correct_mim_versions_dir/[8;1H[K[8;1Hne_id_list_file = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt[9;1H[K[9;1Hpms_profiles = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt[10;1H[K[10;1Hpms_scanner_map = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt[11;1H[K[11;1Hroot_subnetwork = ONRM_ROOT_MO[12;1H[K[12;1Hsubnetwork_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB[13;1H[K[13;1Hmim_model_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt[14;1H[K[14;1H[39;1H[K[14;1H[39;1H:wq"migration.properties.BB" [New] 14L, 873C written[?1l>
+[16:05:11 root@renm1lms1:migration_day1 ]# 
+[16:05:11 root@renm1lms1:migration_day1 ]# 
+[16:05:12 root@renm1lms1:migration_day1 ]# 
+[16:05:12 root@renm1lms1:migration_day1 ]# cat -v mig gration.properties.BB 
+OMMON PROPERTIES ######
+ossrc_hostname = 10.80.124.4
+ossrc_username = nmsadm
+ossrc_password = nms275
+###### NETWORK ELEMENT MIGRATION PROPERTIES ######
+migration_arne_xml_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/arne_xml_dir/
+correct_mim_versions_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/correct_mim_versions_dir/
+ne_id_list_file = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+pms_profiles = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+pms_scanner_map = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+root_subnetwork = ONRM_ROOT_MO
+subnetwork_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+mim_model_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+
+[16:05:20 root@renm1lms1:migration_day1 ]# vi migration.properties.BB
+[?1h=[1;39r[m[m[0m[H[J[39;1H"migration.properties.BB" 14L, 873C[1;1HOMMON PROPERTIES ######
+ossrc_hostname = 10.80.124.4
+ossrc_username = nmsadm
+ossrc_password = nms275
+###### NETWORK ELEMENT MIGRATION PROPERTIES ######
+migration_arne_xml_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/arne_xml_dir/
+correct_mim_versions_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/correct_mim_versions_dir/
+ne_id_list_file = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+pms_profiles = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+pms_scanner_map = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+root_subnetwork = ONRM_ROOT_MO
+subnetwork_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+mim_model_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;1H
+
+
+
+
+
+
+
+
+
+
+
+
+~[13;1H[0m[39;1H[K[39;1H:wq"migration.properties.BB" 13L, 872C written[?1l>
+[16:05:42 root@renm1lms1:migration_day1 ]# 
+[16:05:42 root@renm1lms1:migration_day1 ]# 
+[16:05:42 root@renm1lms1:migration_day1 ]# 
+[16:05:42 root@renm1lms1:migration_day1 ]# 
+[16:05:42 root@renm1lms1:migration_day1 ]# 
+[16:05:42 root@renm1lms1:migration_day1 ]# ls -lrt migration.properties.BB
+-rw-r--r--. 1 root root 872 Aug 28 16:05 migration.properties.BB
+[16:05:47 root@renm1lms1:migration_day1 ]# 
+[16:05:48 root@renm1lms1:migration_day1 ]# 
+[16:05:48 root@renm1lms1:migration_day1 ]# 
+[16:05:48 root@renm1lms1:migration_day1 ]# 
+[16:05:48 root@renm1lms1:migration_day1 ]# 
+[16:05:48 root@renm1lms1:migration_day1 ]# cat migration.properties.BB
+OMMON PROPERTIES ######
+ossrc_hostname = 10.80.124.4
+ossrc_username = nmsadm
+ossrc_password = nms275
+###### NETWORK ELEMENT MIGRATION PROPERTIES ######
+migration_arne_xml_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/arne_xml_dir/
+correct_mim_versions_file_path = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/correct_mim_versions_dir/
+ne_id_list_file = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+pms_profiles = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+pms_scanner_map = /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+root_subnetwork = ONRM_ROOT_MO
+subnetwork_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+mim_model_mapping_file = /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+[16:05:52 root@renm1lms1:migration_day1 ]# cat migration.properties.BB |cut -d ""="" -f 2
+OMMON PROPERTIES ######
+ 10.80.124.4
+ nmsadm
+ nms275
+###### NETWORK ELEMENT MIGRATION PROPERTIES ######
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/arne_xml_dir/
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/correct_mim_versions_dir/
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+ ONRM_ROOT_MO
+ /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+ /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+[16:06:13 root@renm1lms1:migration_day1 ]# fp or i in ''c'a't' 'm'i'g'r'a't'i'o'n'.'p'r'o'p'e'r't'i'e's'.'B'B' '|'c'u't' '-'d' '"'='"' '-'f' '2''; do ls -lrt $i;  done
+ls: cannot access cat: No such file or directory
+ls: cannot access |cut: No such file or directory
+ls: cannot access "=": No such file or directory
+ls: cannot access 2: No such file or directory
+migration.properties.BB
+[16:06:43 root@renm1lms1:migration_day1 ]# for i in 'cat migration.properties.BB |cut -d "=" -f 2'; do ls -lrt $i;done
+ls: cannot access cat: No such file or directory
+ls: cannot access |cut: No such file or directory
+ls: cannot access "=": No such file or directory
+ls: cannot access 2: No such file or directory
+migration.properties.BB
+[16:08:32 root@renm1lms1:migration_day1 ]# for i in 'cat migration.properties.BB |cut -d = -f 2'; do ls -lrt $i;done
+ls: cannot access cat: No such file or directory
+ls: cannot access |cut: No such file or directory
+ls: cannot access =: No such file or directory
+ls: cannot access 2: No such file or directory
+migration.properties.BB
+[16:08:42 root@renm1lms1:migration_day1 ]# cat migration.properties.BB |cut -d = -f 2
+OMMON PROPERTIES ######
+ 10.80.124.4
+ nmsadm
+ nms275
+###### NETWORK ELEMENT MIGRATION PROPERTIES ######
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/arne_xml_dir/
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/correct_mim_versions_dir/
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+ /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+ ONRM_ROOT_MO
+ /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+ /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+[16:08:54 root@renm1lms1:migration_day1 ]# for i in `cat migration.properties.BB |cut -d = -f 2`; do ls -lrt $i ; done
+ls: cannot access OMMON: No such file or directory
+ls: cannot access PROPERTIES: No such file or directory
+ls: cannot access ######: No such file or directory
+ls: cannot access 10.80.124.4: No such file or directory
+ls: cannot access nmsadm: No such file or directory
+ls: cannot access nms275: No such file or directory
+ls: cannot access ######: No such file or directory
+ls: cannot access NETWORK: No such file or directory
+ls: cannot access ELEMENT: No such file or directory
+ls: cannot access MIGRATION: No such file or directory
+ls: cannot access PROPERTIES: No such file or directory
+ls: cannot access ######: No such file or directory
+total 45268
+-rw-------. 1 root root 46347871 Aug 28 14:35 exported_migration_arne.xml
+total 484
+-rw-r--r--. 1 root root 493546 Aug 28 14:35 ne_mim_versions.txt
+-rw-r--r--. 1 root root 15 Aug 28 14:35 /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/Batch1_BB.txt
+-rw-r--r--. 1 root root 12616088 Aug 28 14:35 /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_profiles.txt
+-rw-r--r--. 1 root root 740 Aug 28 14:35 /var/tmp/ENM_WRAN_Migration/migration_day1/migration_files/pms_scannermap.txt
+ls: cannot access ONRM_ROOT_MO: No such file or directory
+-rw-r--r--. 1 root root 36 Aug 28 15:36 /var/tmp/ENM_WRAN_Migration/migration_day1/subnetwork_mapping_BB
+-rw-r--r--. 1 root root 33 Aug 28 15:34 /var/tmp/ENM_WRAN_Migration/migration_day1/mim_model_mapping_file_BB.txt
+[16:09:52 root@renm1lms1:migration_day1 ]# 

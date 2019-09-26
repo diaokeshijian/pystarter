@@ -72,7 +72,6 @@ def node_credential_generation(node_list):
     NodeCredential.write(header + enter)
     NodeCredential.write(Nodes_start + enter)
     for node in node_list:
-        print len(node)
         if len(node) > 0:
             print("write!!")
             NodeCredential.write(table + node_start + enter)

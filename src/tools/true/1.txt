@@ -1,0 +1,2 @@
+cmedit get CMI0092T_2NB01 snmpTargetV2C.*
+cmedit get CMI0081T_2NB01 snmpTargetV2C.*

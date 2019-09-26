@@ -84,7 +84,7 @@ def disableOssCertificates(osscerts, _node):
         response_line = ''
         for line in _response_lines:
             response_line = response_line + line
-        if '1 instance(s) updated' not in response_line:
+        if 'SUCCESS FDN' not in response_line:
             print '[FAIL] set OSS certs managedState FAILED! Node name: ' + _node + '; OSS certs id: ' + cert_id + '.'
             exit(1)
 
@@ -96,14 +96,11 @@ def setTrustedCategorywithEnmCerts(enmcerts, _node):
     logging.info(_response)
     trustedCertificates = ''
     for _oss_cert_id in enmcerts:
-        tmp = '"SubNetwork=RadioNode,MeContext=' + _node + ',ManagedElement=NKW3048X_2NB01,SystemFunctions=1,SecM=1,' \
-                                                           'CertM=1,TrustedCertificate=' + _oss_cert_id + '",'
+        tmp = '"SubNetwork=RadioNode,MeContext=' + _node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,TrustedCertificate=' + _oss_cert_id + '",'
         trustedCertificates = trustedCertificates + tmp
     trustedCertificates = trustedCertificates[0: -1]
-    command_remove_osscerts_from_trusted_category = 'cmedit set SubNetwork=RadioNode,MeContext=' + _node + \
-                                                   ',ManagedElement=' + _node + ',SystemFunctions=1,SecM=1,CertM=1,' \
-                                                                                'TrustCategory=1 trustedCertificates=' \
-                                                                                '[' + trustedCertificates + ']'
+    command_remove_osscerts_from_trusted_category = 'cmedit set SubNetwork=RadioNode,MeContext=' + _node + ',ManagedElement=' + _node + ',SystemFunctions=1,SecM=1,CertM=1,TrustCategory=1 trustedCertificates=[' + trustedCertificates + ']'
+    print 'command_remove_osscerts_from_trusted_category : ' + command_remove_osscerts_from_trusted_category
     _response = terminal.execute(command_remove_osscerts_from_trusted_category)
     _response_code = _response.http_response_code()
     print 'stage : setTrustedCategorywithEnmCerts'
@@ -149,8 +146,13 @@ def removeOssCertsFromNE(osscerts, node):
 
 
 #node_file = open(sys.argv[1])
-#node_list = node_file.readlines()
-node_list = ['CNT7134X_2NB01']
+node_file = open('C:\\Users\\ebenyue\\OneDrive - Ericsson AB\\Project\\004 _ Thailand_TRUE_Migration\\Migration_Day3\\pilot.txt')
+node_list_lines = node_file.readlines()
+node_list = []
+for line in node_list_lines:
+    line = line.replace('\n', '')
+    node_list.append(line)
+#node_list = ['CNT7134X_2NB01']
 
 for node in node_list:
     certs_in_node = sortCertificates(node)
@@ -159,5 +161,6 @@ for node in node_list:
     disableOssCertificates(oss_certs, node)
     setTrustedCategorywithEnmCerts(enm_certs, node)
     removeOssCertsFromNE(oss_certs, node)
+    print 'OSS certificates removed successfully for node : ' + node
 
 # logging.info('Program started!')
