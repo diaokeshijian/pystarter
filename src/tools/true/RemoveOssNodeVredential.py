@@ -78,7 +78,8 @@ def getEnmNodeCredId(node_name):
 #################
 
 node_list = []
-node_file = open(sys.argv[1])
+#node_file = open(sys.argv[1])
+node_file = open('C:\\Users\\ebenyue\\OneDrive - Ericsson AB\\Project\\004 _ Thailand_TRUE_Migration\\Migration_Day3\\pilot.txt')
 for node in node_file:
     node = node.replace('\n', '')
     node_list.append(node)
@@ -91,14 +92,7 @@ for node in node_list:
     else:
         print node
         enmNodeCredentialId = credentials['enmNodeCredentialId']
-        command_change_node_https_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,HttpM=1,Https=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(
-            enmNodeCredentialId) + "'"
+        command_change_node_https_credential = 'cmedit delete SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + enmNodeCredentialId + ' --force --ALL'
         #  print command_change_node_https_credential
         result = terminal.execute(command_change_node_https_credential)
-        logging.info(str(result))
-        command_change_node_clitls_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,CliTls=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(
-            enmNodeCredentialId) + "'"
-        # print command_change_node_clitls_credential
-        result = terminal.execute(command_change_node_clitls_credential)
-        logging.info(str(result))
 
