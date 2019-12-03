@@ -1,6 +1,0 @@
-Thu, 26 Sep 2019 21:46:15 removeOssCerts.py[line:36] INFO Program started!
-Thu, 26 Sep 2019 21:46:15 removeOssCerts.py[line:38] INFO establish ENM terminal session:
-Thu, 26 Sep 2019 21:46:15 session.py[line:53] INFO ENM opening session: https://enmnth.rfterranenm1.net, Administrator
-Thu, 26 Sep 2019 21:46:15 connectionpool.py[line:735] INFO Starting new HTTPS connection (1): enmnth.rfterranenm1.net
-Thu, 26 Sep 2019 21:46:15 session.py[line:60] INFO ENM session is open: [https://enmnth.rfterranenm1.net][Administrator][<enmscripting.private.session.ExternalSession object at 0x0000000005FE59E8>]
-Thu, 26 Sep 2019 21:46:15 removeOssCerts.py[line:43] INFO ENM terminal session established!
