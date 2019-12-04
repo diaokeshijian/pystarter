@@ -30,7 +30,7 @@ enm_pass = 'TestPassw0rd'
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
-                    filename=log_dir + 'Update_Https_Clitls_' + str(time.strftime('%Y%m%d%H%M%S')) + '.log',
+                    filename=log_dir + 'Delete_OSS_NodeCredential_' + str(time.strftime('%Y%m%d%H%M%S')) + '.log',
                     filemode='a')
 
 logging.info('Program started!')
@@ -78,8 +78,7 @@ def getEnmNodeCredId(node_name):
 #################
 
 node_list = []
-#node_file = open(sys.argv[1])
-node_file = open('C:\\Users\\ebenyue\\OneDrive - Ericsson AB\\Project\\004 _ Thailand_TRUE_Migration\\Migration_Day3\\pilot.txt')
+node_file = open(sys.argv[1])
 for node in node_file:
     node = node.replace('\n', '')
     node_list.append(node)
@@ -91,8 +90,19 @@ for node in node_list:
         logging.info('node has not been certificated by ENM, node name: ' + node)
     else:
         print node
-        enmNodeCredentialId = credentials['enmNodeCredentialId']
-        command_change_node_https_credential = 'cmedit delete SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + enmNodeCredentialId + ' --force --ALL'
-        #  print command_change_node_https_credential
+        ossNodeCredentialId = credentials['ossNodeCredentialId']
+        command_change_node_https_credential = 'cmedit delete SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(ossNodeCredentialId) + ' --force --ALL'
+        logging.info('command_change_node_https_credential : ' + command_change_node_https_credential)
         result = terminal.execute(command_change_node_https_credential)
+        logging.info(result.get_output())
+        output_line = ''
+        for line in result.get_output():
+            output_line = output_line + line + ' ; '
+        if 'SUCCESS FDN' in output_line:
+            print 'SUCCEEDED to delete OSS NodeCredential for node : ' + node
+        else:
+            print 'FAILED to delete OSS NodeCredential for node : ' + node
+
+
+
 

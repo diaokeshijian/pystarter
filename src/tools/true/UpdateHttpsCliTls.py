@@ -79,6 +79,7 @@ def getEnmNodeCredId(node_name):
 
 node_list = []
 node_file = open(sys.argv[1])
+command_out_put_file = open('UpdateHttpsCliTls.txt', 'a')
 for node in node_file:
     node = node.replace('\n', '')
     node_list.append(node)
@@ -90,15 +91,28 @@ for node in node_list:
         logging.info('node has not been certificated by ENM, node name: ' + node)
     else:
         print node
+        # enmNodeCredentialId = credentials['enmNodeCredentialId']
+        # command_change_node_https_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,HttpM=1,Https=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(
+        #     enmNodeCredentialId) + "'"
+        # #  print command_change_node_https_credential
+        # result = terminal.execute(command_change_node_https_credential)
+        # logging.info(str(result))
+        # command_change_node_clitls_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,CliTls=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(
+        #     enmNodeCredentialId) + "'"
+        # # print command_change_node_clitls_credential
+        # result = terminal.execute(command_change_node_clitls_credential)
+        # logging.info(str(result))
         enmNodeCredentialId = credentials['enmNodeCredentialId']
         command_change_node_https_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,HttpM=1,Https=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(
             enmNodeCredentialId) + "'"
         #  print command_change_node_https_credential
-        result = terminal.execute(command_change_node_https_credential)
-        logging.info(str(result))
+        command_out_put_file.write(command_change_node_https_credential)
+        command_out_put_file.write('\n')
         command_change_node_clitls_credential = 'cmedit set SubNetwork=RadioNode,MeContext=' + node + ',ManagedElement=' + node + ",SystemFunctions=1,SysM=1,CliTls=1 nodeCredential='SubNetwork=RadioNode,MeContext=" + node + ',ManagedElement=' + node + ',SystemFunctions=1,SecM=1,CertM=1,NodeCredential=' + str(
             enmNodeCredentialId) + "'"
         # print command_change_node_clitls_credential
-        result = terminal.execute(command_change_node_clitls_credential)
-        logging.info(str(result))
+        command_out_put_file.write(command_change_node_clitls_credential)
+        command_out_put_file.write('\n')
+
+command_out_put_file.close()
 

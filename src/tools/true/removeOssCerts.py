@@ -20,8 +20,8 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d')
 log_dir = './'
 
 enm_url = 'https://enmnth.rfterranenm1.net'
-enm_user = 'Administrator'
-enm_pass = 'TestPassw0rd'
+enm_user = 'leigu001_v11'
+enm_pass = 'Password1234'
 
 #################
 # Logging
@@ -138,7 +138,6 @@ def removeOssCertsFromNE(osscerts, node):
         print command_remove_oss_certs_from_ne
         response_line = ''
         for line in _response_lines:
-            print line
             response_line = response_line + line
         if 'SUCCESS FDN' not in response_line:
             print '[FAIL] remove OSS-RC certificates from NE failed! Node name : ' + node + 'Certificate ID : ' + cert_id
@@ -146,13 +145,12 @@ def removeOssCertsFromNE(osscerts, node):
 
 
 #node_file = open(sys.argv[1])
-node_file = open('C:\\Users\\ebenyue\\OneDrive - Ericsson AB\\Project\\004 _ Thailand_TRUE_Migration\\Migration_Day3\\pilot.txt')
+node_file = open('C:\\Users\\ebenyue\\OneDrive - Ericsson AB\\Project\\004 _ Thailand_TRUE_Migration\\Migration_Day6_One_PICO_Node\\ne_id_list.txt')
 node_list_lines = node_file.readlines()
 node_list = []
 for line in node_list_lines:
     line = line.replace('\n', '')
     node_list.append(line)
-#node_list = ['CNT7134X_2NB01']
 
 for node in node_list:
     certs_in_node = sortCertificates(node)
