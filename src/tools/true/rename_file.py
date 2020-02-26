@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#coding:utf-8
+# coding:utf-8
 import os
 
 # locate the files:
@@ -13,6 +13,7 @@ for file in files:
     old_file = os.path.join(base_path + file)
     new_file = os.path.join(base_path + file.replace('.txt', '') + '.log')
     os.rename(old_file, new_file)
+
 
 
 

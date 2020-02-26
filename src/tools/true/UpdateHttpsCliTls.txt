@@ -1,1 +1,0 @@
-cmedit set SubNetwork=RadioNode,MeContext=CNT6711X_2NB01,ManagedElement=CNT6711X_2NB01,SystemFunctions=1,SysM=1,HttpM=1,Https=1 nodeCredential='SubNetwork=RadioNode,MeContext=CNT6711X_2NB01,ManagedElement=CNT6711X_2NB01,SystemFunctions=1,SecM=1,CertM=1,NodeCredential=3'
