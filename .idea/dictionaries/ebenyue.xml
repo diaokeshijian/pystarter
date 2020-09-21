@@ -3,7 +3,12 @@
     <words>
       <w>cmedit</w>
       <w>enmcerts</w>
+      <w>enumtranslate</w>
+      <w>filecompression</w>
+      <w>filetype</w>
       <w>osscerts</w>
+      <w>prettyformat</w>
+      <w>subnetwork</w>
     </words>
   </dictionary>
 </component>

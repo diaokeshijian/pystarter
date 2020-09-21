@@ -5,7 +5,10 @@ import requests
 article_urls = []
 img_urls = []
 counter = 0
-root_path = 'C:\\Users\\Eli\\Desktop\\test\\'
+root_path = 'C:\\temp\\image_downloader\\'
+image_directory = "C:\\temp\\image_downloader\\downloaded_images\\"
+config_directory = "C:\\temp\\image_downloader\\config\\"
+url_index = ['https://t66y.com/thread0806.php?fid=16', 'https://t66y.com/thread0806.php?fid=16']
 headers = {
     'Accept': '*/*',
     'Accept-Encoding': 'gbk, utf-8',

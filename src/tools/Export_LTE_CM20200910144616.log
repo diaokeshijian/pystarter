@@ -1,0 +1,6 @@
+Thu, 10 Sep 2020 14:46:16 exportLTECM.py[line:28] INFO Program started!
+Thu, 10 Sep 2020 14:46:16 exportLTECM.py[line:30] INFO establish ENM terminal session:
+Thu, 10 Sep 2020 14:46:16 session.py[line:53] INFO ENM opening session: https://enm.hljlt.5genm.cn/, exportltecm
+Thu, 10 Sep 2020 14:46:16 connectionpool.py[line:735] INFO Starting new HTTPS connection (1): enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 14:46:17 session.py[line:60] INFO ENM session is open: [https://enm.hljlt.5genm.cn/][exportltecm][<enmscripting.private.session.ExternalSession object at 0x00000000036E56A0>]
+Thu, 10 Sep 2020 14:46:17 exportLTECM.py[line:33] INFO ENM terminal session established!

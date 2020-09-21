@@ -12,8 +12,8 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d')
 log_dir = './'
 
 enm_url = 'https://enmnth.rfterranenm1.net'
-enm_user = 'Administrator'
-enm_pass = 'TestPassw0rd'
+enm_user = 'exportltecm'
+enm_pass = 'Yffs#60!'
 
 #################
 # Logging

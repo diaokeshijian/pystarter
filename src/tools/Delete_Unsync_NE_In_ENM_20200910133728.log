@@ -1,0 +1,13 @@
+Thu, 10 Sep 2020 13:37:28 exportLTECM.py[line:28] INFO Program started!
+Thu, 10 Sep 2020 13:37:28 exportLTECM.py[line:30] INFO establish ENM terminal session:
+Thu, 10 Sep 2020 13:37:28 session.py[line:53] INFO ENM opening session: https://enm.hljlt.5genm.cn/, exportltecm
+Thu, 10 Sep 2020 13:37:28 connectionpool.py[line:735] INFO Starting new HTTPS connection (1): enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 13:37:29 session.py[line:60] INFO ENM session is open: [https://enm.hljlt.5genm.cn/][exportltecm][<enmscripting.private.session.ExternalSession object at 0x000000000327E6A0>]
+Thu, 10 Sep 2020 13:37:29 exportLTECM.py[line:33] INFO ENM terminal session established!
+Thu, 10 Sep 2020 13:37:59 connectionpool.py[line:238] INFO Resetting dropped connection: enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 13:38:29 connectionpool.py[line:238] INFO Resetting dropped connection: enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 13:39:00 connectionpool.py[line:238] INFO Resetting dropped connection: enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 13:39:30 connectionpool.py[line:238] INFO Resetting dropped connection: enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 13:40:01 connectionpool.py[line:238] INFO Resetting dropped connection: enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 13:40:31 connectionpool.py[line:238] INFO Resetting dropped connection: enm.hljlt.5genm.cn
+Thu, 10 Sep 2020 13:41:01 connectionpool.py[line:238] INFO Resetting dropped connection: enm.hljlt.5genm.cn
