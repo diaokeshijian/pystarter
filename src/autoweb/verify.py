@@ -24,7 +24,16 @@ def get_index_urls():
 
 def get_article_urls():
     for index_url in index_urls:
-        print(index_url)
+        response = requests.get(index_url, headers=headers)
+        response.encoding = 'gbk'
+        response_text = response.text
+        response_text_in_lines = response_text.split('h3>')
+        for line in response_text_in_lines:
+            if 'target="_blank"' in line and 'stylesheet' not in line and '永久域名' not in line and 'color=blue' not in line \
+                    and 'color=red' not in line and 'color=orange' not in line:
+                article_url_short = line.split('"')[1]
+                article_url_long = 'https://t66y.com/' + article_url_short
+                article_urls.append(article_url_long)
 
 
 def get_request_header():
