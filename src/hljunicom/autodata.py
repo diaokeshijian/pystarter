@@ -3,12 +3,12 @@ import enmscripting
 import csv
 import codecs
 
-#enm_url = 'https://enm.hljlt.5genm.cn'
-#enm_user = 'Administrator'
-#enm_pass = 'TestPassw0rd'
+enm_url = 'https://enm.hljlt.5genm.cn'
+enm_user = 'Administrator'
+enm_pass = 'TestPassw0rd'
 
-#session = enmscripting.open(enm_url, enm_user, enm_pass)
-#terminal = session.terminal()
+session = enmscripting.open(enm_url, enm_user, enm_pass)
+terminal = session.terminal()
 
 
 class NrCell:
@@ -27,11 +27,10 @@ class NrCell:
               + self.operationalState + ', ' + self.NodeId + ', ' + self.gNBId + ', ' + self.city
 
 
-
 NrCellMap = {}
-#output = terminal.execute('cmedit get * NRCellDU.(cellLocalId,nRTAC,administrativeState,operationalState) -t')
-#output_lines = output.get_output()
-output_lines = open('C:\\Users\\ebenyue\\Desktop\\5G_1.log')
+output = terminal.execute('cmedit get * NRCellDU.(cellLocalId,nRTAC,administrativeState,operationalState) -t')
+output_lines = output.get_output()
+#output_lines = open('C:\\Users\\ebenyue\\Desktop\\5G_1.log')
 
 for line in output_lines:
     if '-' in line:
@@ -42,12 +41,10 @@ for line in output_lines:
         NrCellMap[nrCell.NRCellDUId] = nrCell
 
 
+output = terminal.execute('cmedit get * GNBDUFunction.gNBId -t')
+output_lines = output.get_output()
 
-
-#output = terminal.execute('cmedit get * GNBDUFunction.gNBId -t')
-#output_lines = output.get_output()
-
-output_lines = open('C:\\Users\\ebenyue\\Desktop\\5G_2.log')
+#output_lines = open('C:\\Users\\ebenyue\\Desktop\\5G_2.log')
 for line in output_lines:
     if '1' in line:
         while '  ' in line:
@@ -78,7 +75,7 @@ for key in NrCellMap:
 csvFile = open('5g_export.csv', 'wb')
 csvFile.write(codecs.BOM_UTF8)
 csv_writer = csv.writer(csvFile)
-csv_writer.writerow(['1', '2', '3', '4', '5', '6'])
+csv_writer.writerow(['地市', 'NodeId', 'NRCellDUId', 'gNBId', 'nRTAC', 'operationalState'])
 for key in NrCellMap:
     nrCell = NrCellMap[key]
     csv_writer.writerow([nrCell.city, nrCell.NodeId, nrCell.NRCellDUId, nrCell.gNBId, nrCell.nRTAC, nrCell.operationalState])
