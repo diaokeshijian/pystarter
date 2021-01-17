@@ -16,7 +16,7 @@ monitored_url = []
 root_path = "D:\\caty\\"
 img_urls = []
 counter = 0
-daily_counter = 0;
+daily_counter = 0
 
 headers = {
     'Accept': '*/*',
@@ -26,16 +26,16 @@ headers = {
     'host': 't66y.com',
     'Referer': 'https://t66y.com/',
     'User-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW 64) AppleWebKit/537.36 '
-                  '(KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE'
+                  '(HTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE'
 }
 
 
 def get_monitored_page_urls():
     monitored_page_urls_file = open('D:\\caty\\monitored_page_urls', 'r')
     monitored_page_urls = monitored_page_urls_file.readlines()
-    for url in monitored_page_urls:
-        if len(url) != 0:
-            monitored_url.append(url.strip())
+    for page_url in monitored_page_urls:
+        if len(page_url) != 0:
+            monitored_url.append(page_url.strip())
     monitored_page_urls_file.close()
 
 
@@ -99,12 +99,13 @@ while True:
     get_downloaded_urls()
     for url in monitored_url:
         if url not in downloaded_urls:
+            print('扫描到下载任务， 即将开始下载...')
             download_page(url)
             mark_url_as_downloaded(url)
             daily_counter = daily_counter + counter
             counter = 0
             img_urls = []
             time.sleep(5)
-        else:
-            time.sleep(5)
-
+            print('当前页面下载完成，即将扫描监控文本，检测下载任务...')
+    print('当前无下载任务，30秒后重新扫描监控文本...')
+    time.sleep(30)
