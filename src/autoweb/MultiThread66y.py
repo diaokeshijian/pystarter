@@ -14,9 +14,9 @@ import time
 from http.client import RemoteDisconnected
 from requests.exceptions import ConnectionError
 from requests.exceptions import ChunkedEncodingError
-
-import requests
 from urllib3.exceptions import ProtocolError
+import requests
+
 
 downloaded_urls = []
 monitored_url = []
@@ -57,7 +57,7 @@ def get_downloaded_urls():
     downloaded_urls_file.close()
 
 
-def download_img(img_url, file_path):
+def download_img(img_url, file_path, title):
     print(img_url)
     image_name = img_url.split('/')[-1]
     print('downloading ' + image_name)
@@ -72,8 +72,10 @@ def download_img(img_url, file_path):
         print('failed to download url: ' + img_url)
         print('Connection aborted. Remote end closed connection without response')
     except ProtocolError:
+        print('failed to download url: ' + img_url)
         print('Remote end closed connection without response')
     except ChunkedEncodingError:
+        print('failed to download url: ' + img_url)
         print('An existing connection was forcibly closed by the remote host, , None, 10054, None')
     if len(response_img_content) != 0:
         with open(file_path + '\\' + image_name, 'wb') as imgfile:
@@ -84,7 +86,7 @@ def download_img(img_url, file_path):
             counter = counter + 1
             global daily_counter
             daily_counter = daily_counter + 1
-            print(str(counter) + ' of ' + str(len(img_urls)) + ' has been downloaded.')
+            print(title + str(counter) + ' of ' + str(len(img_urls)) + ' has been downloaded.')
             print(str(daily_counter) + ' have been downloaded in this session today.')
 
 
@@ -113,10 +115,11 @@ def download_page(link):
         os.makedirs(downloaded_image_file_path)
     threads = []
     for img_url in img_urls:
-        t = threading.Thread(target=download_img, args=(img_url, downloaded_image_file_path))
+        t = threading.Thread(target=download_img, args=(img_url, downloaded_image_file_path, title))
         threads.append(t)
     for t in threads:
         t.start()
+        print('thread ' + t.getName() + ' has been started')
     for t in threads:
         t.join(120)
 
