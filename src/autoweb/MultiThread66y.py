@@ -1,4 +1,5 @@
-# _*_ coding:utf-8 _*_
+
+# encoding=utf8
 #
 # @Version : 1.0
 # @Time    : 2021/1/11 14:37
@@ -16,7 +17,6 @@ from requests.exceptions import ConnectionError
 from requests.exceptions import ChunkedEncodingError
 from urllib3.exceptions import ProtocolError
 import requests
-
 
 downloaded_urls = []
 monitored_url = []
@@ -36,6 +36,7 @@ headers = {
     'User-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW 64) AppleWebKit/537.36 '
                   '(HTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE'
 }
+lock = threading.Lock()
 
 
 def get_monitored_page_urls():
@@ -58,9 +59,10 @@ def get_downloaded_urls():
 
 
 def download_img(img_url, file_path, title):
-    print(img_url)
+    #    print(img_url)
     image_name = img_url.split('/')[-1]
     print('downloading ' + image_name)
+    time.sleep(0.1)
     response_img_content = b''
     try:
         response_img = requests.get(img_url)
@@ -83,9 +85,11 @@ def download_img(img_url, file_path, title):
             imgfile.close()
             print(image_name + ' has been downloaded.')
             global counter
-            counter = counter + 1
             global daily_counter
+            lock.acquire()
+            counter = counter + 1
             daily_counter = daily_counter + 1
+            lock.release()
             print(title + str(counter) + ' of ' + str(len(img_urls)) + ' has been downloaded.')
             print(str(daily_counter) + ' have been downloaded in this session today.')
 
@@ -119,9 +123,10 @@ def download_page(link):
         threads.append(t)
     for t in threads:
         t.start()
-        print('thread ' + t.getName() + ' has been started')
+    #        print('thread ' + t.getName() + ' has been started')
     for t in threads:
         t.join(120)
+
 
 #        global thread_counter
 #        while thread_counter < 5:
@@ -140,16 +145,15 @@ def download_img_in_url(page_url):
     print('开始下载链接：  ' + page_url)
     download_page(url)
     mark_url_as_downloaded(url)
-    global daily_counter
     global counter
     global img_urls
-    daily_counter = daily_counter + counter
     counter = 0
     img_urls = []
     time.sleep(5)
     print('当前页面下载完成，即将扫描监控文本，检测下载任务...')
 
 
+threadLock = threading.RLock
 while True:
     monitored_url = []
     downloaded_urls = []
