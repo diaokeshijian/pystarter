@@ -114,7 +114,7 @@ def download_page(link):
             # print(line_element)
             img_urls.append(line_element[1])
 
-    downloaded_image_file_path = root_path + title
+    downloaded_image_file_path = root_path + 'pages\\' + title
     if not os.path.exists(downloaded_image_file_path):
         os.makedirs(downloaded_image_file_path)
     threads = []
